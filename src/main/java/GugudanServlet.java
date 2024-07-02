@@ -20,12 +20,11 @@ public class GugudanServlet extends HttpServlet {
         int limit = rp.getIntParam("limit" , 0);
 
         rp.appendBody("<h1>%d단 </h1>".formatted(dan));
-        
+
         for (int i =1; i <= limit; i++) {
             resp.getWriter().append("<div>%d * %d =%d</div>".formatted(dan, i, dan * i));
-
-
-
         }
+
+
     }
 }
